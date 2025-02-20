@@ -1,7 +1,8 @@
 <img src="readmeImages/thevault.png" alt="The Vault logo" style="width: 24px; height: 24px; vertical-align: middle;"> **theVault**
 
 <p align="center">
-  <img src="readmeImages/screenshot.png" alt="The Vault Screenshot" style="max-width: 100%; height: auto;">
+  <img src="readmeImages/screenshot0.png" alt="The Vault Screenshot - Celebrity DNA" style="max-width: 100%; height: auto;">
+  <img src="readmeImages/screenshot.png" alt="The Vault Screenshot - Arists Category" style="max-width: 100%; height: auto;">
 </p>
 
 Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
