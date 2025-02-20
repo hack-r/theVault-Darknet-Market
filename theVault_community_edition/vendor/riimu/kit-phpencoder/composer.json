@@ -1,0 +1,46 @@
+{
+  "name": "riimu/kit-phpencoder",
+  "description": "Highly customizable alternative to var_export for PHP code generation",
+  "license": "MIT",
+  "type": "library",
+  "keywords": [
+    "variable",
+    "export",
+    "code",
+    "generator",
+    "encoder"
+  ],
+  "authors": [
+    {
+      "name": "Riikka Kalliomäki",
+      "email": "riikka.kalliomaki@gmail.com",
+      "homepage": "http://riimu.net"
+    }
+  ],
+  "homepage": "http://kit.riimu.net",
+  "require": {
+    "php": ">=5.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Riimu\\Kit\\PHPEncoder\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Riimu\\Kit\\PHPEncoder\\": "tests/tests/",
+      "Riimu\\Kit\\PHPEncoder\\Test\\": "tests/extra/"
+    }
+  },
+  "scripts": {
+    "ci-all": [
+      "composer test -- --do-not-cache-result",
+      "composer phpcs -- --no-cache",
+      "composer php-cs-fixer -- --dry-run --diff --using-cache=no",
+      "composer normalize --dry-run"
+    ],
+    "php-cs-fixer": "php-cs-fixer fix -v",
+    "phpcs": "phpcs -p",
+    "test": "phpunit"
+  }
+}

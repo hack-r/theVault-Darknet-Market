@@ -1,0 +1,16 @@
+If you get a MariaDB error like "SQLSTATE[42000]: Syntax error or access violation: 1055 'marketplace.vendors.vendor_level' isn't in GROUP BY".
+
+A temporary fix is:
+
+	SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+
+followed by a restart. A permnaent fix is:
+
+	[mysqld]
+	sql_mode = "STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+
+in /etc/my.cnf. You can restart with:
+
+	sudo systemctl restart mariadb
+
+

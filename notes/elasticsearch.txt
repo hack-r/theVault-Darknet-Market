@@ -1,0 +1,7 @@
+This project used to use a scout driver for elasticsearch from babekoivan, which is now archived. Instead, the project uses algolia/scout-extended.
+
+Make sure your .env has:
+
+SCOUT_DRIVER=algolia
+ELASTICSEARCH_HOST=http://localhost:9200
+

@@ -1,0 +1,1 @@
+The demo site uses Font Awesome 6.7 gliphs as icons (in addition to a custom icon and custom favicon). Tor Browser was having trouble displaying Font Awesome when loaded properly, for some reason, even using a local copy. As a hot fix, the demo site now uses hardcoded references to individual gliphs. If this creates an issue for you, please open a GitHub Issue.

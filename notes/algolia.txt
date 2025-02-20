@@ -1,0 +1,2 @@
+composer require algolia/algoliasearch-client-php "^4.0"
+

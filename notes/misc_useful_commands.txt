@@ -1,0 +1,84 @@
+Goldhat had an epic list of commands for maintenance and operations. Until we found it here's a running manual list merged with some AI output based on it.
+
+#######################
+## DATABASE
+# update driver
+sudo dnf install php-mysqlnd
+# use interactive DB shell
+mysql -u root -p # or just mysql
+
+######################
+## SERVER OPS
+# php-fpm debugging
+sudo dnf install php-fpm
+sudo systemctl restart php-fpm
+# pdo
+sudo dnf install php-mysqlnd
+php -m | grep pdo_mysql
+# save yourself hours over time by
+# putting this into your .bashrc or .zshrc, etc.
+function p() {
+	php artisan config:clear
+	php artisan cache:clear
+	php artisan route:clear
+	php artisan view:clear
+	php artisan serve
+}
+function c() {
+	php artisan config:clear
+	php artisan cache:clear
+	php artisan route:clear
+	php artisan view:clear
+}
+
+
+#######################
+## TROUBLESHOOTING
+# Regen autoload files
+composer dump-autoload
+
+# increase PHP watchers limit
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+# misc
+php --ini | grep "Loaded Configuration File"
+
+###################
+## PHP Artisan
+1. **Clear Cache and Configurations:**
+   - `php artisan cache:clear` - Clears the application cache.
+   - `php artisan config:clear` - Clears the configuration cache.
+   - `php artisan route:clear` - Clears the route cache.
+   - `php artisan view:clear` - Clears the compiled view files.
+
+2. **Caching:**
+   - `php artisan config:cache` - Creates a cache file for faster configuration loading.
+   - `php artisan route:cache` - Creates a cache file for faster route registration.
+   - `php artisan view:cache` - Compiles all of the application's Blade templates.
+
+3. **Database Migrations:**
+   - `php artisan migrate` - Runs the database migrations.
+   - `php artisan migrate:rollback` - Rolls back the last batch of migrations.
+   - `php artisan migrate:status` - Shows the status of each migration.
+
+4. **Seeding the Database:**
+   - `php artisan db:seed` - Runs the database seeders.
+   - `php artisan migrate --seed` - Runs migrations and seeds the database.
+
+5. **Creating Resources:**
+   - `php artisan make:model ModelName` - Creates a new Eloquent model.
+   - `php artisan make:controller ControllerName` - Creates a new controller.
+   - `php artisan make:migration create_table_name` - Creates a new migration file.
+   - `php artisan make:seeder SeederName` - Creates a new database seeder.
+
+6. **Running the Application:**
+   - `php artisan serve` - Serves the application on the PHP built-in server.
+
+7. **Testing:**
+   - `php artisan test` - Runs the application tests.
+
+8. **Other Useful Commands:**
+   - `php artisan list` - Lists all available Artisan commands.
+   - `php artisan help command_name` - Displays help for a specific command.
+
+composer require --dev barryvdh/laravel-ide-helper

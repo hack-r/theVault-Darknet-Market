@@ -1,0 +1,77 @@
+# For more information on configuration, see:
+#   * Official English Documentation: http://nginx.org/en/docs/
+#   * Official Russian Documentation: http://nginx.org/ru/docs/
+
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log notice;
+pid /run/nginx.pid;
+
+# Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
+include /usr/share/nginx/modules/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile            on;
+    tcp_nopush          on;
+    keepalive_timeout   65;
+    types_hash_max_size 4096;
+
+    include             /etc/nginx/mime.types;
+    default_type        application/octet-stream;
+
+    # Main server block for the .onion site
+    server {
+        listen       80;
+        listen       [::]:80;
+        server_name  vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion;
+
+        root         /var/www/market/public;  # Adjust the root directory as needed
+        index        index.php index.html index.htm;
+
+        # Security headers
+        add_header X-Content-Type-Options nosniff;
+        add_header X-Frame-Options DENY;
+        add_header X-XSS-Protection "1; mode=block";
+        add_header Content-Security-Policy "default-src 'self'";
+
+        # Main location block
+        location / {
+            try_files $uri $uri/ /index.php?$query_string;
+
+            # Limit HTTP methods
+            limit_except GET POST {
+                deny all;
+            }
+        }
+
+        # PHP handling
+        location ~ \.php$ {
+            try_files $uri =404;
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_pass unix:/run/php/php7.2-fpm.sock;  # Adjust PHP version as needed
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+
+        # Deny access to sensitive files
+        location ~ /\. {
+            deny all;
+        }
+        location ~* \.(ini|log|conf|sh|md)$ {
+            deny all;
+        }
+    }
+
+    # Additional server blocks can be added here if needed
+}

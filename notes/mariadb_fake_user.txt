@@ -1,0 +1,25 @@
+MariaDB [marketplace]> INSERT INTO users (id, username, password, mnemonic, referral_code, created_at, updated_at)
+    -> VALUES (
+    -> '9d4e1e23-4567-89ab-cdef-0123456789ab',
+    -> 'celebdna',
+    -> 'dummy_password',
+    -> 'dummy_mnemonic',
+    -> 'dummy_referral',
+    -> NOW(),
+    -> NOW()
+    -> );
+Query OK, 1 row affected (0.075 sec)
+
+or make a few:
+
+MariaDB [marketplace]> INSERT INTO users (id, username, password, mnemonic, referral_code, created_at, updated_at)
+    -> VALUES
+    -> ('9d4e1e23-4567-89ab-cdef-0123456789ab', 'celebdna1', 'dummy1', 'mnemonic1', 'ref1', NOW(), NOW()),
+    -> ('3b5a1e23-7890-abcd-ef01-23456789abcd', 'celebdna2', 'dummy2', 'mnemonic2', 'ref2', NOW(), NOW()),
+    -> ('c2f5a123-4567-89ab-cdef-abcdef123456', 'celebdna3', 'dummy3', 'mnemonic3', 'ref3', NOW(), NOW());
+MariaDB [marketplace]> 
+MariaDB [marketplace]> INSERT INTO vendors (id, vendor_level, experience, about, profilebg, trusted, created_at, updated_at)
+    -> VALUES
+    -> ('9d4e1e23-4567-89ab-cdef-0123456789ab', 2, 150, 'Specializes in high-quality DNA donor screening for couples seeking enhanced fertility options.', 'dna_bg1.jpg', 1, NOW(), NOW()),
+    -> ('3b5a1e23-7890-abcd-ef01-23456789abcd', 3, 300, 'Leading provider of curated DNA donor profiles with comprehensive genetic compatibility testing.', 'dna_bg2.jpg', 1, NOW(), NOW()),
+    -> ('c2f5a123-4567-89ab-cdef-abcdef123456', 1, 90, 'Offers personalized DNA donor matching services designed to support couples in their journey to conceive.', 'dna_bg3.jpg', 0, NOW(), NOW());

@@ -1,0 +1,13 @@
+parameters:
+  paths:
+    - config
+    - src
+
+  level: 0
+
+  ignoreErrors:
+    - identifier: new.static
+    - "#\\(void\\) is used.#"
+
+  excludePaths:
+    - src/Engines/Algolia3Engine.php

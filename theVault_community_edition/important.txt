@@ -1,0 +1,1 @@
+Community Edition is not a Communist Edition. These files are only a snapshot from the last PHP upgrade to the common feature set available from EM, GH, and others (although there's many bugfixes and a few small structural improvements, better DB interfacing, etc.). Upgrade to the Pro version or a custom build to unlock security and richer features.

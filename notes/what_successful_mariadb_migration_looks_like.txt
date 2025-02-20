@@ -1,0 +1,13 @@
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................ 43.94ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ............................................................................................... 288.94ms DONE
+  0001_01_01_000001_create_cache_table ............................................................................................... 198.78ms DONE
+  0001_01_01_000002_create_jobs_table ................................................................................................. 55.80ms DONE
+
+
+If you see output saying nothing to migrate or that has errors, try creating a new user/pass in MariaDB, grant them privileges to the DB and all tables, flush privileges, make sure your .env is updated, then run php artisan migrate again.

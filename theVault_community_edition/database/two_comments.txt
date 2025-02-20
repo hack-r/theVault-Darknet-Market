@@ -1,0 +1,3 @@
+1. The original structure included a seeds directory, which has been renamed as "seeders" for compatibility with Laravel 11.
+
+2. Using seeder data to get started is fine, but in my experience restoring the demo data from the .sql is quicker and less error-prone. 

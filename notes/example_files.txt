@@ -1,0 +1,2 @@
+In the "example_files" directory you will find some highly useful files for getting started quickly. The .repo file will allow you to install elasticsearch to Fedora using dnf (saves you about 30 minutes of work). The algolia.php file will do the initial sync of your MariaDB/MySQL DB with algolia; you just need to copy/paste your app ID and secret from their website into it. The .sql file can be used to restore the demo marketplace DB to MariaDB/MySQL and is recommended over seeder data.
+
