@@ -1,12 +1,14 @@
 <img src="readmeImages/thevault.png" alt="The Vault logo" style="width: 24px; height: 24px; vertical-align: middle;"> **theVault**
 
 Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
-1. Goldhat Free Market. <img src="readmeImages/goldhat.png" alt="Goldhat Free Market" style="width: 25px; height: 25px;">
-2. The 2024 speculative medical thriller ["Baby X" by Kira Peikoff](https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735), which explores a near-future darknet vendor store selling DNA in the wake of advances in fertilization technologies. (Available on Amazon, Audible, and Barnes & Noble.)
+1. <img src="readmeImages/goldhat.png" alt="Goldhat Free Market" style="width: 25px; height: 25px;"> Goldhat Free Market.
+2. The 2024 speculative medical thriller ["Baby X" by Kira Peikoff](https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735), which explores a near-future darknet vendor store selling DNA in the wake of advances in fertilization technologies (available on Amazon, Audible, Barnes & Noble, etc.).
 
 <p align="center">
   <img src="readmeImages/screenshot0.png" alt="The Vault Screenshot - Celebrity DNA" style="max-width: 100%; height: auto;">
+
   <strong>LIVE DEMO:</strong> <a href="http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/" target="_blank">http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/</a>
+
   <img src="readmeImages/screenshot.png" alt="The Vault Screenshot - Arists Category" style="max-width: 100%; height: auto;">
 </p>
 
