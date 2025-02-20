@@ -6,6 +6,7 @@ Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
 
 <p align="center">
   <img src="readmeImages/screenshot0.png" alt="The Vault Screenshot - Celebrity DNA" style="max-width: 100%; height: auto;">
+> **LIVE DEMO:** http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/
   <img src="readmeImages/screenshot.png" alt="The Vault Screenshot - Arists Category" style="max-width: 100%; height: auto;">
 </p>
 
