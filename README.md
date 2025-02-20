@@ -1,22 +1,25 @@
-# 🏰 theVault
+# theVault
+
+<div style="background-color: #000; color: #fff; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 20px;">
+  <a href="http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/">
+    <img src="thevault.png" alt="The Vault logo" style="max-width: 200px; display: block; margin: 0 auto;">
+  </a>
+  <br>
+  <span style="font-family: 'Courier New', Courier, monospace; font-size: 1.2em;">
+    Your trusted darknet vendor store.
+  </span>
+</div>
+
 <p align="center">
-<img src="screenshot.png" alt="The Vault Screenshot" style="max-width: 100%; height: auto;">
+  <img src="screenshot.png" alt="The Vault Screenshot" style="max-width: 100%; height: auto;">
 </p>
 
 Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
 
 1. Goldhat Free Market. <img src="goldhat.png" alt="Goldhat Free Market" style="width: 25px; height: 25px;">
-2. The 2024 speculative medical thriller ["Baby X" by Kira Peikoff](https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735), which explores a near-future darknet vendor store selling DNA in wake of advances in fertilization technologies. Available on Amazon, Audible, and Barnes & Noble.
+2. The 2024 speculative medical thriller ["Baby X" by Kira Peikoff](https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735), which explores a near-future darknet vendor store selling DNA in the wake of advances in fertilization technologies. (Available on Amazon, Audible, and Barnes & Noble.)
 
-Goldhat was a legal darknet market-like store launched in 2020, which was forked from Eckmar's Marketplace. The project was only launched as a beta (no sales) to avoid potential legal liability. It included a major PHP upgrade (from v5 to v8) as well as a security enhancements with significant hardening of Nginx. Eckmar's project was orphaned following the release of PHP8 due to breaking changes. Goldhat restricted user-to-user communications and implemented other safeguards to prevent abuse during its public beta. 
-
-<p align="center">
-  <a href="http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/">
-    <img src="thevault.png" alt="The Vault logo" style="max-width: 100%; height: auto;">
-  </a>
-  <br>
-  <em>Your trusted darknet vendor store.</em>
-</p>
+Goldhat was a legal darknet market-like store launched in 2020, forked from Eckmar's Marketplace. The project was only launched as a beta (no sales) to avoid potential legal liability. It included a major PHP upgrade (from v5 to v8) as well as security enhancements with significant hardening of Nginx. Eckmar's project was orphaned following the release of PHP8 due to breaking changes. Goldhat restricted user-to-user communications and implemented other safeguards to prevent abuse during its public beta.
 
 > **LIVE DEMO:** http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/
 
@@ -24,47 +27,91 @@ Clearnet demo coming soon.
 
 **New to Tor?**  
 If you haven’t used Tor before, get started by downloading the [Tor Browser Bundle](https://www.torproject.org/download/). It’s free, easy to install, and ideal for safely accessing .onion sites:
-	1. Download and install the Tor Browser Bundle from the link above.
-	2. Launch the Tor Browser.
-	3. Paste the provided .onion address into the browser’s address bar for a secure connection to theVault.
+1. Download and install the Tor Browser Bundle from the link above.
+2. Launch the Tor Browser.
+3. Paste the provided .onion address into the browser’s address bar for a secure connection to theVault.
+
+For everyday browsing with enhanced privacy and functionality, consider using the [Brave Browser](https://brave.com/). Brave offers better privacy than Chrome, supports modern web features, and is capable of loading .onion addresses.
 
 ## 🚀 Project Overview
 
-**theVault** is a transformation of previous projects into a fully functional vendor store. It builds upon the foundations laid by Eckmar's Market and Goldhat Free Market, updating the codebase to utilize **Laravel 11** and **PHP 8.3.x**.
+**theVault** is a transformation of previous projects into a fully functional vendor store. It builds upon the foundations laid by Eckmar's Marketplace and Goldhat Free Market, updating the codebase to utilize **Laravel 11** and **PHP 8.3.x**.
 
-This project has been tested on Debian and Fedora. Fedora is recommended on the basis that Debian is cruddy and basic. It probably runs fine on almost any linux but you'll need to update the installer commands (change dnf or apt to whatever you're using and map the package names to those for your distro).
+This project has been tested on Debian and Fedora. Fedora is recommended on the basis that Debian is cruddy and basic. It probably runs fine on almost any Linux, but you'll need to update the installer commands (change dnf, apt, or your package manager accordingly).
 
 ### ⚙️ Features
 
 - **Modern Framework**: Built on Laravel 11 and PHP 8.3.16 for enhanced performance and maintainability.
-- **Elasticsearch Vectorstore**: Fast searching with the newest elasticsearch (currently 8.17).
-- **OpenJDK**: Updated Java, bundled with elasticsearch for compatibility.
+- **Elasticsearch Vectorstore**: Fast searching with the newest Elasticsearch (currently 8.17).
+- **OpenJDK**: Updated Java, bundled with Elasticsearch for compatibility.
 - **Redis**: Optional Redis 7.2.7 support for improved app performance.
+
+---
 
 ## 📦 Installation
 
-To get started with **theVault**, follow these steps:
+### The Vault Community Edition (theVault CE)
+Here you will find a fully functional darknet market/store.
 
-1. Request to pay $99 for the project (XMR, LTC, BTC, or Zelle).
-2. Deploy on any Linux VM supporting Tor with at 2GB RAM (Fedora or Debian recommended).
-3. Use the automated installation scripts in `install` and see the .txt files for notes and useful commands.
+#### What's included?
 
-Features:
-1. Admin panel.
-2. Store or Market mode.
-3. Fast search with a selection of local or hosted providers (elasticsearch, algolia, etc.).
-4. Parent and child categories.
-5. Catpcha.
-6. Load-balancer support.
-7. Mneumonics.
-8. XMR and BTC integration with wrapper-based drop-in support for other currencies.
-9. PHP 8.x and Laravel 11/12 support.
+1. A fully functional, darknet-ready market based on PHP 8.3 and Laravel 11.
+2. Support for Laravel 12, launching at the end of February 2025.
+3. Admin panel.
+4. Multi-seller support.
+5. Captchas.
+6. Semi-automated installation.
+7. Quick-start .sql database backup of the demo site (this can be easier than seeder data for bootstrapping).
+8. Sample server configuration (nginx).
+9. Support for multiple search backends (Elasticsearch for privacy and Algolia for speed; pure SQL is also supported but not recommended).
+10. Optional support for Redis.
+11. Featured product module (integrated but unimplemented in the demo configuration).
+12. Parent and child product categories.
+13. Convenience functions for listing vendors and products (top, rising, newest, etc.) primarily using Eloquent.
+14. Troubleshooting notes and common administration tasks.
+15. Dispute resolution tools.
 
-For additional help with Redis, check out this article: https://linuxcapable.com/install-redis-on-fedora-linux/
+This version is essentially Eckmar's Marketplace v1 upgraded to PHP8 with some critical bugfixes from Goldhat and the integration of the Featured Products module from EM v2.
 
-The process is identical for Debian, but uses apt and package names end with -dev in Debian where they are -devel for Fedora. The installer will attempt to directly install elasticsearch for you, but I recommend to comment that out and use either the provided repo file for a dnf/yum-based installation or use the Docker container from https://elastic.co. Other installation strategies are also available on their website.
+#### What's missing?
+For an additional $99 you can access features not available in theVault CE, including:
+1. Load Balancing.
+2. Advanced anti-DDoS.
+3. Extra security modules.
+4. On-market forum.
 
-	sudo dnf install --enablerepo=elasticsearch elasticsearch
+Additionally, the following services are available as freelance work:
+- Support for any cryptocurrency.
+- Walletless payments.
+- Server configuration and setup.
+- Pentesting and vulnerability mitigation.
+
+#### Deployment Steps (CE)
+1. Request to pay $99 for the extra features (optional; the CE version is free and fully functional).
+2. Deploy on any Linux VM supporting Tor with at least 2GB RAM (Fedora or Debian recommended).
+3. Use the automated installation scripts in the `install` directory and refer to the accompanying .txt files for notes and useful commands.
+
+---
+
+### The Vault Pro
+*Features not available in the Community Edition require the Pro version, available for an additional fee.*
+- Includes all the CE features.
+- Load Balancing support.
+- Advanced anti-DDoS.
+- Extra security modules.
+- On-market forum integration.
+- Further customization and enterprise support options (available as freelance work upon request).
+
+*Deployment steps follow similarly with additional security configuration options.*
+
+For additional help with Redis, check out this article:  
+https://linuxcapable.com/install-redis-on-fedora-linux/
+
+The process is analogous on Debian (using apt with package names ending with `-dev` instead of Fedora's `-devel`). The installer attempts to directly install Elasticsearch; however, it is recommended to comment that out and utilize either the provided repo file for a dnf/yum-based installation or deploy the Docker container from https://elastic.co. Other installation strategies are available on their website.
+
+        sudo dnf install --enablerepo=elasticsearch elasticsearch
+
+---
 
 ## 💼 Freelance Support
 
@@ -76,25 +123,21 @@ I offer freelance support as a maintainer or developer for **theVault**. Please 
 
 ## 📞 Contact
 
-For inquiries or support, please reach out to me directly. I can be reached by GitHub and LinkedIn.
+For inquiries or support, please reach out to me directly. I can be reached on GitHub and LinkedIn.
 
 ---
 
 ## ⚖️ Legal Disclaimers
 
 1. **No Illegal Activities**: This project is intended for educational and research purposes only. Any use of this software for illegal activities is strictly prohibited.
-
 2. **Compliance**: Users are responsible for ensuring that their use of this software complies with all applicable laws and regulations in their jurisdiction.
-
 3. **No Warranty**: This software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement.
-
 4. **Liability**: In no event shall the author or contributors be liable for any damages arising from the use of this software, including but not limited to direct, indirect, incidental, punitive, and consequential damages.
-
 5. **User Responsibility**: Users are solely responsible for any consequences arising from their use of this software, including any legal repercussions.
 
 ## 🎩 Friendly Advice
 
-Big Brother leverages the Eye of Sauron and has many dungeons. The darknet is filled with hackers and LEAs. If you're thinking of using this code to run a drug market/store or other arguably illegal activities, please rethink it. You'll get yourself into trouble. Use this to learn or to give the so-called 'dark net' some much needed original, non-illegal functionality. Give the gift of possible anonymity to a legal service. If you would like to invest and want a few ideas as well as a business partner, drop me a line.
+Big Brother leverages the Eye of Sauron and has many dungeons. The darknet is filled with hackers and LEAs. If you're thinking of using this code to run a drug market/store or for other arguably illegal activities, please rethink it. You'll get yourself into trouble. Use this to learn or to provide the so-called 'darknet' some much-needed original, non-illegal functionality. Give the gift of possible anonymity to a legal service. If you would like to invest and want a few ideas as well as a business partner, drop me a line.
 
 ---
 
