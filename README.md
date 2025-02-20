@@ -1,14 +1,4 @@
-# theVault
-
-<div style="background-color: #000; color: #fff; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 20px;">
-  <a href="http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/">
-    <img src="thevault.png" alt="The Vault logo" style="max-width: 200px; display: block; margin: 0 auto;">
-  </a>
-  <br>
-  <span style="font-family: 'Courier New', Courier, monospace; font-size: 1.2em;">
-    Your trusted darknet vendor store.
-  </span>
-</div>
+<img src="thevault.png" alt="The Vault logo" style="width: 24px; height: 24px; vertical-align: middle;"> **theVault**
 
 <p align="center">
   <img src="screenshot.png" alt="The Vault Screenshot" style="max-width: 100%; height: auto;">
@@ -74,27 +64,26 @@ Here you will find a fully functional darknet market/store.
 This version is essentially Eckmar's Marketplace v1 upgraded to PHP8 with some critical bugfixes from Goldhat and the integration of the Featured Products module from EM v2.
 
 #### What's missing?
-For an additional $99 you can access features not available in theVault CE, including:
+For $99 you can access additional features not available in theVault CE, including:
 1. Load Balancing.
 2. Advanced anti-DDoS.
 3. Extra security modules.
 4. On-market forum.
 
-Additionally, the following services are available as freelance work:
+The following services are available as freelance work:
 - Support for any cryptocurrency.
 - Walletless payments.
-- Server configuration and setup.
+- Server configuration, setup, and support for any Linux distro.
 - Pentesting and vulnerability mitigation.
 
 #### Deployment Steps (CE)
-1. Request to pay $99 for the extra features (optional; the CE version is free and fully functional).
-2. Deploy on any Linux VM supporting Tor with at least 2GB RAM (Fedora or Debian recommended).
-3. Use the automated installation scripts in the `install` directory and refer to the accompanying .txt files for notes and useful commands.
+1. Deploy on any Linux VM supporting Tor with at least 2GB RAM (Fedora or Debian recommended).
+2. Use the automated installation scripts in the `install` directory and refer to the accompanying .txt files for notes and useful commands.
 
 ---
 
 ### The Vault Pro
-*Features not available in the Community Edition require the Pro version, available for an additional fee.*
+*Features not available in the Community Edition require the Pro version, available for an additional $99.*
 - Includes all the CE features.
 - Load Balancing support.
 - Advanced anti-DDoS.
@@ -115,7 +104,7 @@ The process is analogous on Debian (using apt with package names ending with `-d
 
 ## 💼 Freelance Support
 
-I offer freelance support as a maintainer or developer for **theVault**. Please note that any work I undertake must be legally compliant. If you require assistance with development, maintenance, or security enhancements, feel free to reach out!
+I offer freelance support as a maintainer or developer for **theVault**. This includes server configuration and setup support for any Linux distro, in addition to assistance with development, maintenance, and security enhancements. Please note that any work I undertake must be legally compliant. If you require assistance, feel free to reach out!
 
 ## 📅 Future Updates
 
