@@ -1,16 +1,15 @@
 <img src="readmeImages/thevault.png" alt="The Vault logo" style="width: 24px; height: 24px; vertical-align: middle;"> **theVault**
 
+Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
+1. Goldhat Free Market. <img src="readmeImages/goldhat.png" alt="Goldhat Free Market" style="width: 25px; height: 25px;">
+2. The 2024 speculative medical thriller ["Baby X" by Kira Peikoff](https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735), which explores a near-future darknet vendor store selling DNA in the wake of advances in fertilization technologies. (Available on Amazon, Audible, and Barnes & Noble.)
+
 <p align="center">
   <img src="readmeImages/screenshot0.png" alt="The Vault Screenshot - Celebrity DNA" style="max-width: 100%; height: auto;">
   <img src="readmeImages/screenshot.png" alt="The Vault Screenshot - Arists Category" style="max-width: 100%; height: auto;">
 </p>
 
-Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
-
-1. Goldhat Free Market. <img src="readmeImages/goldhat.png" alt="Goldhat Free Market" style="width: 25px; height: 25px;">
-2. The 2024 speculative medical thriller ["Baby X" by Kira Peikoff](https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735), which explores a near-future darknet vendor store selling DNA in the wake of advances in fertilization technologies. (Available on Amazon, Audible, and Barnes & Noble.)
-
-Goldhat was a legal darknet market-like store launched in 2020, forked from Eckmar's Marketplace. The project was only launched as a beta (no sales) to avoid potential legal liability. It included a major PHP upgrade (from v5 to v8) as well as security enhancements with significant hardening of Nginx. Eckmar's project was orphaned following the release of PHP8 due to breaking changes. Goldhat restricted user-to-user communications and implemented other safeguards to prevent abuse during its public beta.
+Goldhat was a legal darknet market-like store launched in 2020, forked from Eckmar's Marketplace (v1). The project was only launched as a beta (no sales) to avoid potential legal liability. It included a major PHP upgrade (from v5 to v8) as well as security enhancements with significant hardening of Nginx. Eckmar's project was orphaned following the release of PHP8 due to breaking changes. Goldhat restricted user-to-user communications and implemented other safeguards to prevent abuse during its public beta. The project was open-sourced after the project author decided moving forward presented too many legal concerns. theVault integrates changes from v1 to v2 of Eckmar's with some of the Goldhat improvements (more coming) as well as custom bugfixes and upgrades for the latest Laravel and Scout versions.
 
 > **LIVE DEMO:** http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/
 
@@ -26,7 +25,7 @@ For everyday browsing with enhanced privacy and functionality, consider using th
 
 ## 🚀 Project Overview
 
-**theVault** is a transformation of previous projects into a fully functional vendor store. It builds upon the foundations laid by Eckmar's Marketplace and Goldhat Free Market, updating the codebase to utilize **Laravel 11** and **PHP 8.3.x**.
+**theVault** iterates on the foundations laid by Eckmar's Marketplace and Goldhat Free Market, updating the codebase to utilize **Laravel 11** and **PHP 8.3.x**. Laravel 12 will be supported after its imminent launch.
 
 This project has been tested on Debian and Fedora. Fedora is recommended on the basis that Debian is cruddy and basic. It probably runs fine on almost any Linux, but you'll need to update the installer commands (change dnf, apt, or your package manager accordingly).
 
