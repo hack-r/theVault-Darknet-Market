@@ -5,7 +5,8 @@ Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
 2. The 2024 speculative medical thriller ["Baby X" by Kira Peikoff](https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735), which explores a near-future darknet vendor store selling DNA in the wake of advances in fertilization technologies (available on Amazon, Audible, Barnes & Noble, etc.).
 
 <p align="center">
-  <strong>LIVE CLEARNET DEMO:</strong> <a href="https://the-vault.website/" target="_blank">http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/</a>
+
+  <strong>LIVE CLEARNET DEMO:</strong> <a href="https://the-vault.website/" target="_blank">https://the-vault.website/</a>
 
   <img src="readmeImages/screenshot0.png" alt="The Vault Screenshot - Celebrity DNA" style="max-width: 100%; height: auto;">
 
