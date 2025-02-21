@@ -1,4 +1,4 @@
-<img src="readmeImages/favicon.ico" alt="The Vault logo" style="width: 24px; height: 24px; vertical-align: middle;"> **theVault**
+<img src="theVault_community_edition/public/favicon.ico" alt="The Vault logo" style="width: 24px; height: 24px; vertical-align: middle;"> **theVault**
 
 Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
 1. <img src="readmeImages/goldhat.png" alt="Goldhat Free Market" style="width: 25px; height: 25px;"> Goldhat Free Market.
