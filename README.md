@@ -6,19 +6,25 @@ Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
 
 <p align="center">
 
-  <div style="text-align: center;">
-      <strong>LIVE CLEARNET DEMO:</strong> <a href="https://the-vault.website/" target="_blank">https://the-vault.website/</a>
-  </div>
+  <strong>LIVE CLEARNET DEMO:</strong> <a href="https://the-vault.website/" target="_blank">https://the-vault.website/</a>
 
   <img src="readmeImages/screenshot0.png" alt="The Vault Screenshot - Celebrity DNA" style="max-width: 100%; height: auto;">
 
-  <div style="text-align: center;">
-    <strong>LIVE ONION DEMO:</strong> <a href="http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/" target="_blank">http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/</a>
-  </div>
+  <strong>LIVE ONION DEMO:</strong> <a href="http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/" target="_blank">http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/</a>
 
   <img src="readmeImages/screenshot.png" alt="The Vault Screenshot - Arists Category" style="max-width: 100%; height: auto;">
 </p>
-
+    <div class="centered">
+        <strong>LIVE CLEARNET DEMO:</strong> 
+        <a href="https://the-vault.website/" target="_blank">https://the-vault.website/</a>
+        <br>
+        <img src="readmeImages/screenshot0.png" alt="The Vault Screenshot - Celebrity DNA">
+        <br>
+        <strong>LIVE ONION DEMO:</strong> 
+        <a href="http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/" target="_blank">http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion</a>
+        <br>
+        <img src="readmeImages/screenshot.png" alt="The Vault Screenshot - Artists Category">
+    </div>
 Goldhat was a legal darknet market-like store launched in 2020, forked from Eckmar's Marketplace (v1). The project was only launched as a beta (no sales) to avoid potential legal liability. It included a major PHP upgrade (from v5 to v8) as well as security enhancements with significant hardening of Nginx. Eckmar's project was orphaned following the release of PHP8 due to breaking changes. Goldhat restricted user-to-user communications and implemented other safeguards to prevent abuse during its public beta. The project was open-sourced after the project author decided moving forward presented too many legal concerns. theVault integrates changes from v1 to v2 of Eckmar's with some of the Goldhat improvements (more coming) as well as custom bugfixes and upgrades for the latest Laravel and Scout versions.
 
 > **LIVE DEMO:** http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/
