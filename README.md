@@ -18,8 +18,10 @@ Welcome to **theVault**! This is a prototype darknet vendor store inspired by:
 Goldhat was a legal darknet market-like store launched in 2020, forked from Eckmar's Marketplace (v1). The project was only launched as a beta (no sales) to avoid potential legal liability. It included a major PHP upgrade (from v5 to v8) as well as security enhancements with significant hardening of Nginx. Eckmar's project was orphaned following the release of PHP8 due to breaking changes. Goldhat restricted user-to-user communications and implemented other safeguards to prevent abuse during its public beta. The project was open-sourced after the project author decided moving forward presented too many legal concerns. theVault integrates changes from v1 to v2 of Eckmar's with some of the Goldhat improvements (more coming) as well as custom bugfixes and upgrades for the latest Laravel and Scout versions. Once again, the demo URLs are as follows:
 
 > **LIVE DEMO** http://vault3wkmpyv4zgya5itom2vg2qro2q5yzn4ostgudnak2mgl6pwxpad.onion/
+>
 > **CLEARNET MIRROR** https://the-vault.website
 
+This is a demo only, thus Sign Up and Sign In are disabled, as is the transaction system (checkout, etc.). Sign up is supported in the free version. Crytocurrency libraries will need updating. Bitcoin will be easiest to integrate, but any currency can be interfaced. The MoneroRPC project originally used for XMR has been archived, although a fork is still maintained. 
 
 **New to Tor?**
 If you haven’t used Tor before, get started by downloading the [Tor Browser Bundle](https://www.torproject.org/download/). It’s free, easy to install, and ideal for safely accessing .onion sites:
