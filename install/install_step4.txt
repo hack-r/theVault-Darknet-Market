@@ -1,0 +1,15 @@
+You'll need to update elasticsearch's .yml to disable SSL/HTTPS and secure_password if you're not using SSL (which most tor services don't). If you still get an SSL related error, add this to your .yml:
+
+	xpack.security.http.ssl.enabled: false
+
+Unless you have lots of available memory (at least 4GB, but probably 8GB given this isn't the only thing running) you'll want to limit memory usage in java. 
+
+	nano /etc/elasticsearch/jvm.options
+
+There you can limit the memory:
+
+	-Xms512m
+	-Xmx512m
+
+You can change the values to any limit you'd like.
+

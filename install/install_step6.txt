@@ -1,0 +1,138 @@
+####################
+# Setting up Nginx #
+####################
+
+We installed nginx at the beginning. Time to configure it. I've included a working nginx example that assumes this is the only website being served by the server. If you have multiple sites you need to use separate .conf files for each one. I gave the original instructions to ChatGPT v4o-mini and requested some best practices. Here's the result.
+
+Setting up an .onion web application requires careful consideration of security and privacy practices, especially since .onion services are often used for sensitive applications. Below is a set of instructions for configuring Nginx for a .onion web app, along with recommendations for hardening your setup.
+
+### Instructions for Setting Up Nginx for a .onion Web App
+
+1. **Install Nginx and PHP-FPM**:
+   Ensure you have Nginx and PHP-FPM installed on your server. You can install them using the following commands:
+   ```bash
+   sudo apt update
+   sudo apt install nginx php-fpm
+   ```
+
+2. **Create the Nginx Configuration**:
+   Open the Nginx configuration file for editing:
+   ```bash
+   sudo nano /etc/nginx/sites-available/default
+   ```
+
+3. **Add the Following Configuration**:
+   Replace the contents of the file with the following configuration, ensuring to replace `your_onion_address.onion` with your actual .onion address:
+   ```nginx
+   server {
+       listen 80;
+       server_name your_onion_address.onion;
+
+       root /var/www/market/public;
+       index index.php index.html index.htm;
+
+       location / {
+           try_files $uri $uri/ /index.php?$query_string;
+       }
+
+       location ~ \.php$ {
+           try_files $uri =404;
+           fastcgi_split_path_info ^(.+\.php)(/.+)$;
+           fastcgi_pass unix:/run/php/php7.2-fpm.sock;  # Adjust PHP version as needed
+           fastcgi_index index.php;
+           fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+           include fastcgi_params;
+       }
+   }
+   ```
+
+4. **Test the Configuration**:
+   After saving the configuration, test it for syntax errors:
+   ```bash
+   sudo nginx -t
+   ```
+
+5. **Reload Nginx**:
+   If the configuration test is successful, reload Nginx to apply the changes:
+   ```bash
+   sudo systemctl reload nginx
+   ```
+
+6. **Set Up the .onion Service**:
+   Ensure that your Tor service is running and configured to host your .onion site. You can do this by editing the Tor configuration file:
+   ```bash
+   sudo nano /etc/tor/torrc
+   ```
+   Add the following lines to configure your hidden service:
+   ```
+   HiddenServiceDir /var/lib/tor/hidden_service/
+   HiddenServicePort 80 127.0.0.1:80
+   ```
+   After saving the changes, restart the Tor service:
+   ```bash
+   sudo systemctl restart tor
+   ```
+
+7. **Retrieve Your .onion Address**:
+   After restarting Tor, retrieve your .onion address by checking the `hostname` file:
+   ```bash
+   sudo cat /var/lib/tor/hidden_service/hostname
+   ```
+
+### Hardening Your Nginx Configuration
+
+1. **Disable Unused HTTP Methods**:
+   You can restrict HTTP methods to only allow GET and POST:
+   ```nginx
+   server {
+       ...
+       location / {
+           limit_except GET POST {
+               deny all;
+           }
+           ...
+       }
+   }
+   ```
+
+2. **Set Security Headers**:
+   Add security headers to your configuration to help protect against common vulnerabilities:
+   ```nginx
+   add_header X-Content-Type-Options nosniff;
+   add_header X-Frame-Options DENY;
+   add_header X-XSS-Protection "1; mode=block";
+   add_header Content-Security-Policy "default-src 'self'";
+   ```
+
+3. **Limit Access to Sensitive Files**:
+   Prevent access to sensitive files and directories:
+   ```nginx
+   location ~ /\. {
+       deny all;
+   }
+   location ~* \.(ini|log|conf|sh|md)$ {
+       deny all;
+   }
+   ```
+
+4. **Use a Firewall**:
+   Configure a firewall (like UFW or iptables) to restrict access to only necessary ports (e.g., 80 for HTTP). If you're using UFW, you can allow only the necessary ports:
+   ```bash
+   sudo ufw allow 80/tcp
+   sudo ufw enable
+   ```
+
+5. **Keep Software Updated**:
+   Regularly update your server and software packages to ensure you have the latest security patches:
+   ```bash
+   sudo apt update
+   sudo apt upgrade
+   ```
+
+6. **Use Strong Passwords and Authentication**:
+   If your application has an admin panel or user authentication, ensure that you use strong passwords and consider implementing two-factor authentication (2FA).
+
+7. **Monitor Logs**:
+   Regularly monitor your Nginx and Tor logs for any suspicious activity. You can find Nginx logs in `/var/log/nginx/` and
+
+

@@ -1,0 +1,14 @@
+Now you need to edit or create the .env file in /var/www/thevault (or whatever you called this folder-or, if you're wisely keeping your source files elsewhere and just copying them to that location, edit the source and copy it over).
+
+It should look like this:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=marketplace
+DB_USERNAME=root
+DB_PASSWORD=password
+
+Optionally, include the following if you're using Redis:
+
+CACHE_DRIVER=redis

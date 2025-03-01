@@ -1,0 +1,73 @@
+This part was not working well as part of the automated configuration script.
+
+	mysql -u root -p
+	CREATE DATABASE marketplace DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+	exit
+
+The second 2 lines above are run within the MariaDB shell. Back to bash (or Zsh, etc.) please be sure to run:
+
+	mysql_secure_installation
+
+and accept all of the security recommendations(!). This is a darknet store. People and bots will begin trying to hack it instantly. OK, now let's also verify that PHP is working fine, is up to date (8.3+), etc.
+
+I recommend to setup a database user for your store in .env and then make the corresponding user in MariaDB:
+
+GRANT ALL PRIVILEGES ON marketplace.* TO 'thevault'@'localhost' IDENTIFIED BY 'y$o$u$r$p$a$s$s$1$2$3';
+FLUSH PRIVILEGES;
+
+Back to PHP. Check your version:
+
+	php -v
+
+It should say PHP 8.3 or higher. If PHP 9 has come out when you're using this then that will likely be too new, although you can try it. We need to edit the php.ini file:
+
+	sudo nano /etc/php.ini
+
+Inside this file, find the line cgi.fix_pathinfo and set it to cgi.fix_pathinfo=0. You will probably need to uncomment it. Then restart PHP:
+
+	sudo systemctl restart php-fpm
+
+If you want to install elasticsearch from a package manager instead of the 'manual' download in the next installer script, you can add the repo for your Linux version. For Fedora and other RPM-based distros, it would be a file called elasticsearch.repo in the /etc/yum.repos.d/ directory for RedHat based distributions, or in the /etc/zypp/repos.d/ directory for OpenSuSE based distributions, containing:
+
+	[elasticsearch]
+	name=Elasticsearch repository for 8.x packages
+	baseurl=https://artifacts.elastic.co/packages/8.x/yum
+	gpgcheck=1
+	gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+	enabled=0
+	autorefresh=1
+	type=rpm-md
+
+
+Make sure you get the signing file:
+
+	rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+As mentioned in final_steps.txt, you'll most likely want to fully disable SSL/HTTPS in the elasticsearch .yml. This is because tor uses its own encryption in place of SSL, although if you have a dual clearnet/darknet site your configuration may differ. There's a fix in final_steps.txt that solves any remaining SSL issues after the prepopulated values of the .yml have been edited from "true" to "false". Most users will also want to limit memory usage in /etc/elasticsearch/jvm.options. 512mb is usually enough.
+
+Once elasticsearch is running, you can test your installation with:
+
+	curl -X GET "localhost:9200"
+
+Make sure the port is open. The output should look like this:
+
+Documents curl -X GET "localhost:9200"
+
+{
+  "name" : "computer",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "some_id_value",
+  "version" : {
+    "number" : "8.17.2",
+    "build_flavor" : "default",
+    "build_type" : "rpm",
+    "build_hash" : "some_hash_value",
+    "build_date" : "2025-02-05T22:10:57.067596412Z",
+    "build_snapshot" : false,
+    "lucene_version" : "9.12.0",
+    "minimum_wire_compatibility_version" : "7.17.0",
+    "minimum_index_compatibility_version" : "7.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+
