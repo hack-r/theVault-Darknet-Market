@@ -21,7 +21,7 @@ Goldhat was a legal darknet market-like store launched in 2020, forked from Eckm
 >
 > **CLEARNET MIRROR** https://the-vault.website
 
-This is a demo only, thus Sign Up and Sign In are disabled, as is the transaction system (checkout, etc.). Sign up is supported in the free version. Crytocurrency libraries will need updating. Bitcoin will be easiest to integrate, but any currency can be interfaced. The MoneroRPC project originally used for XMR has been archived, although a fork is still maintained. 
+This is a demo only, thus Sign Up and Sign In are disabled, as is the transaction system (checkout, etc.). Sign up is supported in the free version. Cryptocurrency libraries will need updating. Bitcoin will be easiest to integrate, but any currency can be interfaced. The MoneroRPC project originally used for XMR has been archived, although a fork is still maintained. 
 
 **New to Tor?**
 If you haven’t used Tor before, get started by downloading the [Tor Browser Bundle](https://www.torproject.org/download/). It’s free, easy to install, and ideal for safely accessing .onion sites:
