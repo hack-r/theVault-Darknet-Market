@@ -6,3 +6,5 @@ compatibility_date = "2025-01-01"
 directory = "./public"
 binding = "ASSETS"
 run_worker_first = true
+
+[previews]
