@@ -1,4 +1,5 @@
 const REPO_URL = "https://github.com/hack-r/theVault-Darknet-Market";
+const BABY_X_URL = "https://www.barnesandnoble.com/w/baby-x-kira-peikoff/1143604735";
 const POSOCAP_URL = "https://posocap.com";
 
 const TITLE = "theVault – Be right back! Securing new hosting";
@@ -73,7 +74,7 @@ function landingPage(origin) {
     <h2>What is theVault?</h2>
     <p>theVault is an open-source prototype darknet vendor store, inspired by
     <img src="/images/goldhat.png" width="20" height="20" alt="Goldhat logo" style="vertical-align:middle">
-    Goldhat Free Market and the speculative medical thriller <em>Baby X</em>.
+    Goldhat Free Market and the speculative medical thriller <a href="${BABY_X_URL}"><em>Baby X</em></a>.
     Browse the full source code, install guides and notes on
     <a href="${REPO_URL}">GitHub</a>.</p>
   </section>
