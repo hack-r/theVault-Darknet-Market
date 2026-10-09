@@ -47,6 +47,7 @@ function landingPage(origin) {
 <meta name="twitter:description" content="${DESCRIPTION}">
 <meta name="twitter:image" content="${ogImage}">
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="Syt2Pl0w4Djr9r4sqPzl/A" async></script>
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
