@@ -115,7 +115,7 @@ export default {
     }
 
     // Ahrefs / IndexNow ownership key file: must be served as 200 text, not the 503 landing page.
-    if (url.pathname === "/6wd7urc149cn538thu998q5gc72eedd6.txt") {
+    if (url.pathname === "/udjnusam1augum4xcbp34rzm9f47a5z2.txt") {
       return env.ASSETS.fetch(request);
     }
 
